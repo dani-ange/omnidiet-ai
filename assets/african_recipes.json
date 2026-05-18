@@ -1,0 +1,111 @@
+[
+  {
+    "id": "rec_cmr_01",
+    "name": "Ndole",
+    "ingredients_needed": [
+      "Bitterleaf (Ndolé leaves) or Spinach",
+      "Raw Peanuts",
+      "Beef or Smoked Fish",
+      "Shrimp",
+      "Onion",
+      "Garlic",
+      "Ginger",
+      "Palm Oil",
+      "Ground Crayfish"
+    ],
+    "steps": [
+      "Boil and aggressively wash the bitterleaf multiple times to remove excess bitterness, then squeeze dry.",
+      "Boil the beef or smoked fish until tender, keeping the stock.",
+      "Blend the raw peanuts, half an onion, garlic, and ginger with a little water into a smooth paste.",
+      "Add the peanut paste to the meat stock and cook for 15 minutes until it thickens.",
+      "Stir in the washed bitterleaf, ground crayfish, and shrimp. Simmer for 10 minutes.",
+      "In a separate pan, heat the palm oil and fry the remaining sliced onions. Pour this over the stew and turn off the heat."
+    ],
+    "nutrition": {
+      "Calories": "450",
+      "Protein": "35g",
+      "Carbs": "15g",
+      "Fat": "28g"
+    }
+  },
+  {
+    "id": "rec_cmr_02",
+    "name": "Poulet DG (Chicken & Plantain Skillet)",
+    "ingredients_needed": [
+      "Chicken (cut into parts)",
+      "Ripe Plantains",
+      "Bell Peppers",
+      "Carrots",
+      "Green Beans",
+      "tomato",
+      "Onion",
+      "Vegetable Oil",
+      "Garlic",
+      "Ginger"
+    ],
+    "steps": [
+      "Peel the ripe plantains, slice them into rounds, and fry until golden brown. Set aside.",
+      "Season the chicken with garlic and ginger, then pan-fry or roast until browned and cooked through.",
+      "In a large pot, sauté chopped onions, garlic, and tomatoes until the tomatoes break down into a sauce.",
+      "Add the chopped carrots, bell peppers, and green beans. Sauté for 5-7 minutes until slightly tender.",
+      "Toss the cooked chicken and fried plantains into the vegetable sauce. Mix gently and simmer for 5 minutes."
+    ],
+    "nutrition": {
+      "Calories": "520",
+      "Protein": "28g",
+      "Carbs": "45g",
+      "Fat": "22g"
+    }
+  },
+  {
+    "id": "rec_cmr_03",
+    "name": "Eru (Waterleaf & Okok Stew)",
+    "ingredients_needed": [
+      "Eru (Okok leaves)",
+      "Waterleaf or Spinach",
+      "Palm Oil",
+      "Beef Skin (Canda)",
+      "Smoked Fish",
+      "Ground Crayfish",
+      "Scotch Bonnet Pepper"
+    ],
+    "steps": [
+      "Boil the beef skin (Canda) and smoked fish in a pot with a little water and salt until very tender.",
+      "Add the chopped waterleaf to the pot. Do not add extra water, as the waterleaf will release its own liquid.",
+      "Once the waterleaf has wilted down, add the finely shredded Eru leaves and mix thoroughly.",
+      "Stir in the ground crayfish and scotch bonnet pepper.",
+      "Pour the palm oil over the mixture. Simmer on low heat until the water evaporates and the oil separates."
+    ],
+    "nutrition": {
+      "Calories": "410",
+      "Protein": "25g",
+      "Carbs": "8g",
+      "Fat": "32g"
+    }
+  },
+  {
+    "id": "rec_cmr_04",
+    "name": "Koki (Steamed Black-Eyed Pea Pudding)",
+    "ingredients_needed": [
+      "Black-Eyed Peas",
+      "Palm Oil",
+      "Banana Leaves (for wrapping)",
+      "Salt",
+      "Habanero Pepper",
+      "Water"
+    ],
+    "steps": [
+      "Soak the black-eyed peas in water for a few hours, then rub them together to remove the skins.",
+      "Blend the peeled beans with a little water and the habanero pepper until you get a smooth, thick paste.",
+      "Warm the palm oil just until it becomes liquid (do not bleach or overheat it).",
+      "Pour the palm oil into the bean paste and mix vigorously in one direction to incorporate air and make it fluffy.",
+      "Fold the banana leaves to create pouches, fill them with the mixture, tie them securely, and steam in a pot for 1 to 1.5 hours."
+    ],
+    "nutrition": {
+      "Calories": "320",
+      "Protein": "18g",
+      "Carbs": "40g",
+      "Fat": "12g"
+    }
+  }
+]

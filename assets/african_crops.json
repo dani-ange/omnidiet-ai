@@ -1,0 +1,17 @@
+[
+  { "name": "Cassava", "aliases": ["yuca", "manioc"], "calories": 160, "protein": "1.4g", "carbs": "38g", "fat": "0.3g" },
+  { "name": "Plantain", "aliases": ["green plantain", "yellow plantain"], "calories": 122, "protein": "1.3g", "carbs": "32g", "fat": "0.4g" },
+  { "name": "Yam", "aliases": ["african yam", "white yam"], "calories": 118, "protein": "1.5g", "carbs": "28g", "fat": "0.2g" },
+  { "name": "Egusi", "aliases": ["melon seeds", "agushi"], "calories": 557, "protein": "28g", "carbs": "15g", "fat": "47g" },
+  { "name": "Okra", "aliases": ["lady fingers", "gumbo"], "calories": 33, "protein": "1.9g", "carbs": "7.5g", "fat": "0.2g" },
+  { "name": "Cowpeas", "aliases": ["black-eyed peas", "beans", "niebe"], "calories": 116, "protein": "7.7g", "carbs": "21g", "fat": "0.5g" },
+  { "name": "Fonio", "aliases": ["acha"], "calories": 343, "protein": "8.5g", "carbs": "75g", "fat": "1.0g" },
+  { "name": "Teff", "aliases": ["tef"], "calories": 367, "protein": "13.3g", "carbs": "73g", "fat": "2.4g" },
+  { "name": "Sorghum", "aliases": ["guinea corn", "millet"], "calories": 329, "protein": "10.6g", "carbs": "72g", "fat": "3.5g" },
+  { "name": "Cocoyam", "aliases": ["taro", "nduma"], "calories": 112, "protein": "1.5g", "carbs": "26g", "fat": "0.2g" },
+  { "name": "Red Palm Oil", "aliases": ["palm oil", "zomi"], "calories": 884, "protein": "0g", "carbs": "0g", "fat": "100g" },
+  { "name": "Bambara Groundnut", "aliases": ["bambara nut", "jugo beans"], "calories": 387, "protein": "19g", "carbs": "61g", "fat": "6g" },
+  { "name": "Red Onion", "aliases": ["onion", "onions"], "calories": 40, "protein": "1.1g", "carbs": "9.3g", "fat": "0.1g" },
+  { "name": "Tomato", "aliases": ["tomatoes", "plum tomato"], "calories": 18, "protein": "0.9g", "carbs": "3.9g", "fat": "0.2g" },
+  { "name": "Bell Pepper", "aliases": ["green pepper", "red pepper", "capsicum"], "calories": 20, "protein": "0.9g", "carbs": "4.6g", "fat": "0.2g" }
+]
