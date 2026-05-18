@@ -139,7 +139,7 @@ class LandingScreen extends StatelessWidget {
                         
                         // Main App Title Branding
                         const Text(
-                          "Gemma Nutritionist",
+                          "OmniDiet AI ",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 32,
