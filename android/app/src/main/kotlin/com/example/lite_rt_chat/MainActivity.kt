@@ -15,7 +15,7 @@ class MainActivity : FlutterActivity() {
 
     private val CHANNEL = "com.ai.litertlm/chat"
     private val STREAM_CHANNEL = "com.ai.litertlm/stream"
-
+    private var conversation: Conversation? = null
     private var engine: Engine? = null
 
     private var eventSink: EventChannel.EventSink? = null
@@ -145,29 +145,34 @@ class MainActivity : FlutterActivity() {
     // 🌟 INIT MODEL
     // =========================================================
 
-    private fun initModel(
-        result: MethodChannel.Result
-    ) {
-
-        val modelFile = File(
-            filesDir,
-            "gemma-4-E2B-it.litertlm"
-        )
+// =========================================================
+    // 🌟 INIT MODEL
+    // =========================================================
+    private fun initModel(result: MethodChannel.Result) {
+        val modelFile = File(filesDir, "gemma-4-E2B-it.litertlm")
 
         if (!modelFile.exists()) {
-
-            result.error(
-                "FILE_NOT_FOUND",
-                "Missing model at ${modelFile.absolutePath}",
-                null
-            )
-
+            result.error("FILE_NOT_FOUND", "Missing model at ${modelFile.absolutePath}", null)
             return
         }
 
         lifecycleScope.launch(Dispatchers.IO) {
-
             try {
+                // 🌟 CLEAN LINGER LOCKS: Force-close conversation session memory locks cleanly
+                try {
+                    conversation?.close()
+                    conversation = null
+                    Log.d("GEMMA_DEBUG", "🧹 Dropped persistent conversation session memory locks.")
+                } catch (_: Exception) {}
+
+                // 🌟 GLOBAL SINGLETON GUARD: If engine is already warm, return success instantly
+                if (engine != null) {
+                    Log.d("GEMMA_DEBUG", "⚡ Engine already active. Bypassing dual-allocation pass.")
+                    withContext(Dispatchers.Main) {
+                        result.success("Gemma engine already warm in global background context")
+                    }
+                    return@launch
+                }
 
                 val config = EngineConfig(
                     modelPath = modelFile.absolutePath,
@@ -177,30 +182,20 @@ class MainActivity : FlutterActivity() {
                 )
 
                 engine = Engine(config)
-
                 engine?.initialize()
 
+                Log.d("GEMMA_DEBUG", "✅ Cold-boot engine initialization successful.")
                 withContext(Dispatchers.Main) {
-
-                    result.success(
-                        "Gemma initialized successfully"
-                    )
+                    result.success("Gemma initialized successfully")
                 }
 
             } catch (e: Exception) {
-
                 withContext(Dispatchers.Main) {
-
-                    result.error(
-                        "INIT_FAILED",
-                        e.message,
-                        null
-                    )
+                    result.error("INIT_FAILED", e.message, null)
                 }
             }
         }
     }
-
     // =========================================================
     // 🌟 GENERATION
     // =========================================================
@@ -233,7 +228,7 @@ private fun generateSingleResponse(
                 contents.add(
                     Content.AudioFile(audioPath)
                 )
-            }
+              }
 
             if (!imagePath.isNullOrEmpty()) {
                 contents.add(
