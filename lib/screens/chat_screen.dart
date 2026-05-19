@@ -244,7 +244,7 @@ List<String> _memorizedIngredients = [];
      
       debugPrint("🚀 BOOT CHECK 4: Initializing Chat Engine...");
       _scrollToBottom();
-      //_initEngine();
+      _initEngine();
 
       debugPrint("✅ BOOT FULLY COMPLETE!");
     } catch (e, stacktrace) {
@@ -291,30 +291,12 @@ List<String> _memorizedIngredients = [];
   }
 
   Future<void> _initEngine() async {
-    setState(() {
-      _isBusy = true;
-      _messages.add(
-        ChatMessage(text: "Waking up AI Engine...", isSystem: true),
-      );
-    });
-
-    try {
-      await platform.invokeMethod('initModel');
+   
       setState(() {
         _messages.removeWhere((m) => m.text == "Waking up AI Engine...");
         _isInitialized = true;
       });
-    } on PlatformException catch (e) {
-      setState(() {
-        _messages.add(
-          ChatMessage(text: "❌ Engine Error: ${e.message}", isSystem: true),
-        );
-      });
-    } finally {
-      setState(() {
-        _isBusy = false;
-      });
-    }
+    
   }
 
 Future<void> _pickImage() async {
